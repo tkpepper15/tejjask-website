@@ -29,10 +29,10 @@ const IndexLayout: React.FC<LayoutProps> = ({ children }) => {
               </Description>
               {mounted && (
                 <SocialLinks>
-                  <a href="https://docs.google.com/document/d/1SVg5OicX0dVmVkmRItPTlU5I_I7bLPGrKWgzEr2HdlA/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><FiFile /></a>
+                  <a href="https://drive.google.com/file/d/1qZNUMYbKbCpYGoBx_O1BXfgEdl6PMFe4/view?usp=sharing" target="_blank" rel="noopener noreferrer"><FiFile /></a>
                   <a href="https://www.linkedin.com/in/tejjas-kaul-36091a22b/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
                   <a href="https://github.com/tkpepper15" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-                  <a href="https://www.instagram.com/tejjaskphoto/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                  <a href="https://www.instagram.com/tejjask.art/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
                 </SocialLinks>
               )}
               {mounted && (
