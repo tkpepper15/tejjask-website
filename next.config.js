@@ -1,24 +1,12 @@
 // next.config.js
 module.exports = {
   images: {
-    domains: ['www.notion.so', 'lh5.googleusercontent.com', 's3-us-west-2.amazonaws.com', 'your-image-domain.com'],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'www.notion.so' },
+      { protocol: 'https', hostname: 'lh5.googleusercontent.com' },
+      { protocol: 'https', hostname: 's3-us-west-2.amazonaws.com' },
+      { protocol: 'https', hostname: 'prod-files-secure.s3.us-west-2.amazonaws.com' },
+    ],
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  webpack(config, options) {
-    config.module.rules.push({
-      test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-      use: [
-        {
-          loader: 'file-loader',
-          options: {
-            outputPath: 'static/fonts',
-            publicPath: '../fonts', // Adjust this path based on your project structure
-          },
-        },
-      ],
-    });
-    return config;
-  },
+  turbopack: {},
 };
