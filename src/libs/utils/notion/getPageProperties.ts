@@ -3,13 +3,24 @@ import { NotionAPI } from "notion-client"
 import { BlockMap, CollectionPropertySchemaMap } from "notion-types"
 import { customMapImageUrl } from "./customMapImageUrl"
 
+// Handle notion-client response format where block values may be double-nested
+function getBlockValue(blockEntry: any): any {
+  const val = blockEntry?.value
+  if (!val) return undefined
+  // New format: { value: { value: { id, type, ... } } }
+  if (val.value && val.value.id) return val.value
+  // Old format: { value: { id, type, ... } }
+  return val
+}
+
 async function getPageProperties(
   id: string,
   block: BlockMap,
   schema: CollectionPropertySchemaMap
 ) {
   const api = new NotionAPI()
-  const rawProperties = Object.entries(block?.[id]?.value?.properties || [])
+  const blockValue = getBlockValue(block?.[id])
+  const rawProperties = Object.entries(blockValue?.properties || [])
   const excludeProperties = ["date", "select", "multi_select", "person", "file"]
   const properties: any = {}
   for (let i = 0; i < rawProperties.length; i++) {
@@ -21,7 +32,7 @@ async function getPageProperties(
       switch (schema[key]?.type) {
         case "file": {
           try {
-            const Block = block?.[id].value
+            const Block = blockValue
             const url: string = val[0][1][0][1]
             const newurl = customMapImageUrl(url, Block)
             properties[schema[key].name] = newurl

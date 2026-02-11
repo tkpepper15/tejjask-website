@@ -11,17 +11,26 @@ import { TPosts } from "src/types"
  */
 
 // TODO: react query를 사용해서 처음 불러온 뒤로는 해당데이터만 사용하도록 수정
+// Handle notion-client response format where record values may be double-nested
+// New format: { value: { value: { id, ... } } } vs old: { value: { id, ... } }
+function unwrapValue(entry: any): any {
+  const val = entry?.value
+  if (!val) return undefined
+  if (val.value && (val.value.id || val.value.schema)) return val.value
+  return val
+}
+
 export const getPosts = async () => {
   let id = CONFIG.notionConfig.pageId as string
   const api = new NotionAPI()
 
   const response = await api.getPage(id)
   id = idToUuid(id)
-  const collection = Object.values(response.collection)[0]?.value
+  const collection = unwrapValue(Object.values(response.collection)[0])
   const block = response.block
   const schema = collection?.schema
 
-  const rawMetadata = block[id].value
+  const rawMetadata = unwrapValue(block[id])
 
   // Check Type
   if (
@@ -37,11 +46,12 @@ export const getPosts = async () => {
       const id = pageIds[i]
       const properties = (await getPageProperties(id, block, schema)) || null
       // Add fullwidth, createdtime to properties
+      const blockVal = unwrapValue(block[id])
       properties.createdTime = new Date(
-        block[id].value?.created_time
+        blockVal?.created_time
       ).toString()
       properties.fullWidth =
-        (block[id].value?.format as any)?.page_full_width ?? false
+        (blockVal?.format as any)?.page_full_width ?? false
 
       data.push(properties)
     }

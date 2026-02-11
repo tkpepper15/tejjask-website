@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://morethan-log.vercel.app</loc><lastmod>2025-09-10T03:44:21.628Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://morethan-log.vercel.app/blog</loc><lastmod>2025-09-10T03:44:21.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://morethan-log.vercel.app/me</loc><lastmod>2025-09-10T03:44:21.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://morethan-log.vercel.app/smath-hacks</loc><lastmod>2025-09-10T03:44:21.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://morethan-log.vercel.app/ar-glasses</loc><lastmod>2025-09-10T03:44:21.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://morethan-log.vercel.app/homelab</loc><lastmod>2025-09-10T03:44:21.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://morethan-log.vercel.app/moodflip</loc><lastmod>2025-09-10T03:44:21.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://morethan-log.vercel.app/autism-interview</loc><lastmod>2025-09-10T03:44:21.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://morethan-log.vercel.app/vision-pro</loc><lastmod>2025-09-10T03:44:21.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://morethan-log.vercel.app/alzheimer’s-interview</loc><lastmod>2025-09-10T03:44:21.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://morethan-log.vercel.app/about</loc><lastmod>2025-09-10T03:44:21.629Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://morethan-log.vercel.app</loc><lastmod>2026-02-11T14:27:28.688Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://morethan-log.vercel.app/blog</loc><lastmod>2026-02-11T14:27:28.688Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://morethan-log.vercel.app/smath-hacks</loc><lastmod>2026-02-11T14:27:28.688Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://morethan-log.vercel.app/ar-glasses</loc><lastmod>2026-02-11T14:27:28.688Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://morethan-log.vercel.app/homelab</loc><lastmod>2026-02-11T14:27:28.688Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://morethan-log.vercel.app/moodflip</loc><lastmod>2026-02-11T14:27:28.688Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://morethan-log.vercel.app/autism-interview</loc><lastmod>2026-02-11T14:27:28.688Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://morethan-log.vercel.app/vision-pro</loc><lastmod>2026-02-11T14:27:28.688Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://morethan-log.vercel.app/alzheimer’s-interview</loc><lastmod>2026-02-11T14:27:28.688Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
